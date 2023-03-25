@@ -1,0 +1,106 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,700);
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+	background: #333;
+	color: #fff;
+	/*sirve para dar color al background y el color balnco a las letras*/
+}
+
+header {
+	padding: 20px;
+}
+/*establece el área de relleno en los cuatro lados de un elemento a la vez.*/
+h1{
+	font-weight: 700;  /*permite establecer el grosor con el que se muestran las letras del texto.*/
+	text-transform: uppercase; /*especifica el cambio entre mayúsculas y minúsculas del texto de un elemento*/
+	
+}
+p{
+	font-weight: 300; /*permite elegir el grosor del trazo*/
+}
+a {
+	color: gray; /*le da el color gris */
+}
+section {
+	display: flex; /*indica la capacidad de un elemento flexible para alterar sus dimensiones y llenar el espacio disponible.*/
+	justify-content: center; /*define cómo el navegador distribuye el espacio entre y alrededor de los items flex*/
+	flex-wrap: wrap; /*es una propiedad del contenedor flex y especifica si puede haber un cambio de línea ( wrap ) o no ( nowrap ).*/
+}
+[class^="cara-"]{
+	display: flex;
+	margin: 1em;
+	width: 150px;
+	height: 150px;
+	padding: 15px;
+	background: #FEFEF6;
+	border-radius: 10%;
+	/*Son las dimenciones de las caras de los dados*/
+}
+.cara-uno{
+	justify-content: center; /*es la cara del primer dado dado*/
+	align-items: center;
+	
+}
+.cara-dos{
+	justify-content: space-between; /*es la cara del segundo dado*/
+}
+.cara-dos .punto:nth-child(2){
+	align-self: flex-end;
+	/*aca es donde se separan los circulos en columnas*/
+}
+.cara-tres{
+	justify-content: space-between; /*es la cara del tercer dado*/
+}
+.cara-tres .punto:nth-child(2){
+	align-self: center;
+	/*se  pone el circulo en el medio*/
+}
+.cara-tres .punto:nth-child(3){
+	align-self: flex-end;
+	/*aca es donde se separan los circulos en columnas*/
+}
+.cara-cuatro{
+	justify-content: space-between; /*es la cara del cuarto dado*/
+}
+.cara-cuatro .columna {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	/*aca es donde se separan los circulos en columnas*/
+}
+.cara-cinco{
+	display: flex;
+	justify-content: space-between; /*es la cara del quinto dado*/
+}
+.cara-cinco .columna {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	/*aca es donde se separan los circulos en columnas*/
+}
+.cara-cinco .medio{
+	align-self: center;
+	/*aca es donde se pone el circulo en el medio*/
+	
+}
+.cara-seis{
+	display: flex;
+	justify-content: space-between; /*es la cara del sexto dado*/
+}
+.cara-seis .columna{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	/*aca es donde se separan los circulos en columnas*/
+}
+.punto {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: black;
+	box-shadow: inset 0 3px #111, inset 0 -3px #555; 
+	/*aca es donde se le da la forma y el color a los circulitos de los dados*/
+}
